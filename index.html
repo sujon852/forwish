@@ -2,777 +2,362 @@
 <html lang="en">
   <head>
     <title>Agro-Economy & Agro-Waste</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
-    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/ionicons.min.css">    
-    <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/icomoon.css">
-	<link rel="stylesheet" href="css/style.css">
-
-<!-- nav Bar -->
-	<link rel="stylesheet" href="css/bootnavbar.css">
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-
-	<style>
-	.carousel-inner img {
-		width: 100%;
-		height: 350px;
-	}
-	</style>
-
   </head>
+
+  <style>
+      /* body {
+  margin: 0;
+  background: #020202;
+  cursor: crosshair;
+} */
+canvas{display:block}
+h1 {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-family: "Source Sans Pro";
+  font-size: 5em;
+  font-weight: 900;
+  -webkit-user-select: none;
+  user-select: none;
+}
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+body {margin:0; padding:0;font-family: 'Roboto', sans-serif;}
+
+h1, h2 {color:#fff; text-align:center; font-weight:normal; margin:10px auto;}
+h1 {font-size:40px; text-transform:uppercase; letter-spacing:2.5px; text-shadow: 2px 2px 10px #000;}
+h2 {font-size:30px; font-style:italic;text-shadow: 2px 2px 5px #000;}
+#clouds {   
+    height: 700px;
+    overflow: hidden;
+    position: relative;
+    margin-top: 0px;}
+
+#clouds div {position:absolute; width:230px;}
+#clouds div img{ display:block; margin-left: auto;margin-right: auto;}
+.Blittle img{ width:42px; float:left;}
+.BlittleUP img{ width:51px; float:right}
+.Bmedium img{ width:90px; float:left}
+.BmediumUP img{ width:120px; float:right}
+.BmediumUPUP img{ width:140px}
+.Bbig img{ width:280px; float:right}
+
+.Blittle { animation: moveclouds 14s infinite linear forwards;-webkit-animation: moveclouds 14s infinite linear forwards;-moz-animation: moveclouds 14s infinite linear forwards;-o-animation: moveclouds 14s infinite linear forwards;}
+.BlittleUP  { animation: moveclouds 16s infinite linear forwards; -webkit-animation: moveclouds 16s infinite linear forwards;-moz-animation: moveclouds 16s infinite linear forwards;-o-animation: moveclouds 16s infinite linear forwards;}
+.Bmedium   { animation: moveclouds 17s infinite linear forwards;-webkit-animation: moveclouds 17s infinite linear forwards;-moz-animation: moveclouds 17s infinite linear forwards;-o-animation: moveclouds 17s infinite linear forwards;}
+.BmediumUP  { animation: moveclouds 18s infinite linear forwards;-webkit-animation: moveclouds 18s infinite linear forwards;-moz-animation: moveclouds 18s infinite linear forwards;-o-animation: moveclouds 18s infinite linear forwards;}
+.BmediumUPUP  { animation: moveclouds 19s infinite linear forwards;-webkit-animation: moveclouds 19s infinite linear forwards;-moz-animation: moveclouds 19s infinite linear forwards;-o-animation: moveclouds 19s infinite linear forwards;}
+.Bbig  { animation: moveclouds 22s infinite linear forwards;-webkit-animation: moveclouds 22s infinite linear forwards;-moz-animation: moveclouds 22s infinite linear forwards;-o-animation: moveclouds 22s infinite linear forwards;}
+
+
+.BC-1 {left:5%; }
+.BC-2 {left:14.5%;}
+.BC-3 {left:25%;}
+.BC-4 {left:37.5%; }
+.BC-5 {left:50%;}
+.BC-6 {left:62.5%; }
+.BC-7 {left:75%;}
+.BC-8 {left:87.5%; }
+
+
+.BC-1 img{ margin-top:500px}
+.BC-2 img{margin-top:100px}
+.BC-3 img{ margin-top:300px}
+.BC-4 img{ margin-top:150px}
+.BC-5 img{margin-top:350px}
+.BC-6 img{ margin-top:0px}
+.BC-7 img{ margin-top:700px}
+.BC-8 img{ margin-top:100px}
+.Blittle.BC-8 img{margin-top:350px}
+.BlittleUP.BC-3 img{margin-top:0px}
+.BmediumUP.BC-4 img{margin-top:700px}
+
+
+
+@keyframes moveclouds { 
+	0% {  transform: translate(0px, 700px);}
+	100% { transform: translate(0px, -1200px);}
+}
+
+@-webkit-keyframes moveclouds { 
+	0% {  -webkit-transform: translate(0px, 700px);}
+	100% { -webkit-transform: translate(0px, -1200px);}
+}
+
+@-moz-keyframes moveclouds { 
+	0% {  -moz-transform: translate(0px, 700px);}
+	100% { -moz-transform: translate(0px, -1200px);}
+}
+@-o-keyframes moveclouds { 
+	0% {  -o-transform: translate(0px, 700px);}
+	100% { -o-transform: translate(0px, -1200px);}
+}
+#clouds .container { position:absolute; top:50%;     -webkit-transform: translate(0%, -50%);   -moz-transform: translate(0%, -50%);   -ms-transform: translate(0%, -50%);   -o-transform: translate(0%, -50%);   transform: translate(0%, -50%);     width: 100%;}
+
+
+p {text-align:center; font-size:20px; font-weight:bold; margin-top:30px}
+p a {color:#047295}
+
+
+
+
+.pyro > .before, .pyro > .after {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  box-shadow: -120px -218.66667px blue, 248px -16.66667px #00ff84, 190px 16.33333px #002bff, -113px -308.66667px #ff009d, -109px -287.66667px #ffb300, -50px -313.66667px #ff006e, 226px -31.66667px #ff4000, 180px -351.66667px #ff00d0, -12px -338.66667px #00f6ff, 220px -388.66667px #99ff00, -69px -27.66667px #ff0400, -111px -339.66667px #6200ff, 155px -237.66667px #00ddff, -152px -380.66667px #00ffd0, -50px -37.66667px #00ffdd, -95px -175.66667px #a6ff00, -88px 10.33333px #0d00ff, 112px -309.66667px #005eff, 69px -415.66667px #ff00a6, 168px -100.66667px #ff004c, -244px 24.33333px #ff6600, 97px -325.66667px #ff0066, -211px -182.66667px #00ffa2, 236px -126.66667px #b700ff, 140px -196.66667px #9000ff, 125px -175.66667px #00bbff, 118px -381.66667px #ff002f, 144px -111.66667px #ffae00, 36px -78.66667px #f600ff, -63px -196.66667px #c800ff, -218px -227.66667px #d4ff00, -134px -377.66667px #ea00ff, -36px -412.66667px #ff00d4, 209px -106.66667px #00fff2, 91px -278.66667px #000dff, -22px -191.66667px #9dff00, 139px -392.66667px #a6ff00, 56px -2.66667px #0099ff, -156px -276.66667px #ea00ff, -163px -233.66667px #00fffb, -238px -346.66667px #00ff73, 62px -363.66667px #0088ff, 244px -170.66667px #0062ff, 224px -142.66667px #b300ff, 141px -208.66667px #9000ff, 211px -285.66667px #ff6600, 181px -128.66667px #1e00ff, 90px -123.66667px #c800ff, 189px 70.33333px #00ffc8, -18px -383.66667px #00ff33, 100px -6.66667px #ff008c;
+  -moz-animation: 1s bang ease-out infinite backwards, 1s gravity ease-in infinite backwards, 5s position linear infinite backwards;
+  -webkit-animation: 1s bang ease-out infinite backwards, 1s gravity ease-in infinite backwards, 5s position linear infinite backwards;
+  -o-animation: 1s bang ease-out infinite backwards, 1s gravity ease-in infinite backwards, 5s position linear infinite backwards;
+  -ms-animation: 1s bang ease-out infinite backwards, 1s gravity ease-in infinite backwards, 5s position linear infinite backwards;
+  animation: 1s bang ease-out infinite backwards, 1s gravity ease-in infinite backwards, 5s position linear infinite backwards; }
+
+.pyro > .after {
+  -moz-animation-delay: 1.25s, 1.25s, 1.25s;
+  -webkit-animation-delay: 1.25s, 1.25s, 1.25s;
+  -o-animation-delay: 1.25s, 1.25s, 1.25s;
+  -ms-animation-delay: 1.25s, 1.25s, 1.25s;
+  animation-delay: 1.25s, 1.25s, 1.25s;
+  -moz-animation-duration: 1.25s, 1.25s, 6.25s;
+  -webkit-animation-duration: 1.25s, 1.25s, 6.25s;
+  -o-animation-duration: 1.25s, 1.25s, 6.25s;
+  -ms-animation-duration: 1.25s, 1.25s, 6.25s;
+  animation-duration: 1.25s, 1.25s, 6.25s; }
+
+@-webkit-keyframes bang {
+  from {
+    box-shadow: 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white; } }
+@-moz-keyframes bang {
+  from {
+    box-shadow: 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white; } }
+@-o-keyframes bang {
+  from {
+    box-shadow: 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white; } }
+@-ms-keyframes bang {
+  from {
+    box-shadow: 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white; } }
+@keyframes bang {
+  from {
+    box-shadow: 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white; } }
+@-webkit-keyframes gravity {
+  to {
+    transform: translateY(200px);
+    -moz-transform: translateY(200px);
+    -webkit-transform: translateY(200px);
+    -o-transform: translateY(200px);
+    -ms-transform: translateY(200px);
+    opacity: 0; } }
+@-moz-keyframes gravity {
+  to {
+    transform: translateY(200px);
+    -moz-transform: translateY(200px);
+    -webkit-transform: translateY(200px);
+    -o-transform: translateY(200px);
+    -ms-transform: translateY(200px);
+    opacity: 0; } }
+@-o-keyframes gravity {
+  to {
+    transform: translateY(200px);
+    -moz-transform: translateY(200px);
+    -webkit-transform: translateY(200px);
+    -o-transform: translateY(200px);
+    -ms-transform: translateY(200px);
+    opacity: 0; } }
+@-ms-keyframes gravity {
+  to {
+    transform: translateY(200px);
+    -moz-transform: translateY(200px);
+    -webkit-transform: translateY(200px);
+    -o-transform: translateY(200px);
+    -ms-transform: translateY(200px);
+    opacity: 0; } }
+@keyframes gravity {
+  to {
+    transform: translateY(200px);
+    -moz-transform: translateY(200px);
+    -webkit-transform: translateY(200px);
+    -o-transform: translateY(200px);
+    -ms-transform: translateY(200px);
+    opacity: 0; } }
+@-webkit-keyframes position {
+  0%, 19.9% {
+    margin-top: 10%;
+    margin-left: 40%; }
+
+  20%, 39.9% {
+    margin-top: 40%;
+    margin-left: 30%; }
+
+  40%, 59.9% {
+    margin-top: 20%;
+    margin-left: 70%; }
+
+  60%, 79.9% {
+    margin-top: 30%;
+    margin-left: 20%; }
+
+  80%, 99.9% {
+    margin-top: 30%;
+    margin-left: 80%; } }
+@-moz-keyframes position {
+  0%, 19.9% {
+    margin-top: 10%;
+    margin-left: 40%; }
+
+  20%, 39.9% {
+    margin-top: 40%;
+    margin-left: 30%; }
+
+  40%, 59.9% {
+    margin-top: 20%;
+    margin-left: 70%; }
+
+  60%, 79.9% {
+    margin-top: 30%;
+    margin-left: 20%; }
+
+  80%, 99.9% {
+    margin-top: 30%;
+    margin-left: 80%; } }
+@-o-keyframes position {
+  0%, 19.9% {
+    margin-top: 10%;
+    margin-left: 40%; }
+
+  20%, 39.9% {
+    margin-top: 40%;
+    margin-left: 30%; }
+
+  40%, 59.9% {
+    margin-top: 20%;
+    margin-left: 70%; }
+
+  60%, 79.9% {
+    margin-top: 30%;
+    margin-left: 20%; }
+
+  80%, 99.9% {
+    margin-top: 30%;
+    margin-left: 80%; } }
+@-ms-keyframes position {
+  0%, 19.9% {
+    margin-top: 10%;
+    margin-left: 40%; }
+
+  20%, 39.9% {
+    margin-top: 40%;
+    margin-left: 30%; }
+
+  40%, 59.9% {
+    margin-top: 20%;
+    margin-left: 70%; }
+
+  60%, 79.9% {
+    margin-top: 30%;
+    margin-left: 20%; }
+
+  80%, 99.9% {
+    margin-top: 30%;
+    margin-left: 80%; } }
+@keyframes position {
+  0%, 19.9% {
+    margin-top: 10%;
+    margin-left: 40%; }
+
+  20%, 39.9% {
+    margin-top: 40%;
+    margin-left: 30%; }
+
+  40%, 59.9% {
+    margin-top: 20%;
+    margin-left: 70%; }
+
+  60%, 79.9% {
+    margin-top: 30%;
+    margin-left: 20%; }
+
+  80%, 99.9% {
+    margin-top: 30%;
+    margin-left: 80%; } }
+
+  </style>
+
+
+  <body style="background-color: black;">
+
+    <h1 style="width: 80%; color: skyblue;">Many Many Happy Returns of the Day <b style="font-size: 60px; color: white;"><br> Dr. SHELLY Madam</b> <br><p style="font-size: 12px; text-transform: none; color: yellow;">by SheBa Group, USA</p> </h1>
+    
+
+    <!-- <canvas id="birthday"> -->
+        <div class="pyro">
+            <div class="before"></div>
+            <div class="after"></div>
+        </div>
+        <section id="clouds">
+            <div class="Blittle BC-2"><img src="https://cdn2.iconfinder.com/data/icons/happy-birthday-cartoon-2/512/d308_15-512.png" alt="balloon"></div>
+            <div class="Blittle BC-1"><img src="https://cdn2.iconfinder.com/data/icons/happy-birthday-cartoon-2/512/d308_15-512.png" alt="balloon"></div>
+            <div class="Blittle BC-3"><img src="https://cdn2.iconfinder.com/data/icons/happy-birthday-cartoon-2/512/d308_15-512.png" alt="balloon"></div>
+            <div class="Blittle BC-8"><img src="birth/ballon2.png" alt="balloon"></div>
+            <div class="BlittleUP BC-3"><img src="birth/ballon3.png" alt="balloon"></div>
+            <div class="BlittleUP BC-6"><img src="birth/ballon.png" alt="balloon"></div>
+            <div class="Bbig BC-6"><img src="birth/ballon32.png" alt="balloon"></div>
+            <div class="Bmedium BC-1"><img src="birth/sir-mam.png" alt="balloon"></div>
+            <div class="Bmedium BC-3"><img src="birth/bon2.png" alt="balloon"></div>
+            <div class="BmediumUP BC-4"><img src="birth/ballon2.png" alt="balloon"></div>
+            <div class="BmediumUP BC-8"><img src="birth/bon2.png" alt="balloon"></div>
+            <div class="BmediumUPUP BC-4"><img src="birth/ballon.png" alt="balloon"></div>
+            <div class="Bbig BC-5"><img src="birth/mam.png" alt="balloon"></div>
+            <div class="Bbig BC-4"><img src="birth/sir-mam.png" alt="balloon"></div>
+            <div class="Bbig BC-7"><img src="birth/ballon23.png" alt="balloon"></div>
+        </section>
+
+
+
+        <audio controls="controls" autoplay loop>
+            <!-- <source src="birth/hbd.mp3" type="audio/ogg"> -->
+            <source src="birth/hbdm.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+          </audio>
+
+
+
+ <script type="text/javascript">
+        (function() {
+  if (!PIXI.utils.isWebGLSupported()) return;
+
+  const fireworks = new FIREWORKS({
+    full_screen: true,
+    target_node: null,
+    amount: 5
+  });
   
-  <body class="goto-here">
-	<div class="p-1 bg-black" style="background-color:#9ee644 !important">
-    	<div class="container">
-    		<div class="row no-gutters d-flex align-items-start align-items-center px-md-0">
-	    		<div class="col-lg-12 d-block text-center">
-		    		<div class="row d-flex">
-		    			<div class="col-md-3 pr-1 d-flex topper align-items-center">
-					    	<div class="icon mr-2 d-flex justify-content-center align-items-center"></div>
-						    <span class="text"><span class="icon-phone2"></span>&nbsp; (+880) 1824 570690</span>
-					    </div>
-					    <div class="col-md-6 pr-1 d-flex topper align-items-center">
-					    	<!-- <div class="icon mr-2 d-flex justify-content-center align-items-center"></div> -->
-							<span class="text"><a href="#" style="color: black;"><span class="icon-universal-access"></span> Login </a> |  &nbsp;<a href="#" style="color: black;"><span class="icon-user"></span> Create Account</a> <a href="#" style="color: black;"> |  <a href="#" style="color: black;"><span class="icon-support"></span> ADVERTISEMENT</a> </span>
-							
-					    </div>
-					    <div class="col-md-3 pr-1 d-flex topper align-items-center">
-							<ul class="ftco-footer-social list-unstyled float-md-left pt-2">
-								<li class=""><a href="#" style="width: 25px; height: 25px;"><span class="icon-twitter" style="font-size: 15px;"></span></a></li>
-								<li class=""><a href="#" style="width: 25px; height: 25px;"><span class="icon-facebook" style="font-size: 15px;"></span></a></li>
-								<li class=""><a href="#" style="width: 25px; height: 25px;"><span class="icon-instagram" style="font-size: 15px;"></span></a></li>
-								<li class=""><a href="#" style="width: 25px; height: 25px;"><span class="icon-linkedin" style="font-size: 15px;"></span></a></li>
-								<li class=""><a href="#" style="width: 25px; height: 25px;"><span class="icon-youtube-play" style="font-size: 15px;"></span></a></li>
-							  </ul>
-					    </div>
-				    </div>
-			    </div>
-		    </div>
-		</div>
-	</div>
-
-    <nav class="navbar navbar-expand-lg ftco_navbar ftco-navbar-light" id="main_navbar">
-		<div class="container-fluid">
-			<a class="navbar-brand" href="#" style="color: white;">Agro Company</a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-				aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav mr-auto">
-					<li class="nav-item active">
-						<a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-					</li>
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-							aria-haspopup="true" aria-expanded="false">
-							About
-						</a>
-						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<li><a class="dropdown-item" href="about.html">About Us</a></li>
-							<li><a class="dropdown-item" href="aboutmazagin.html">About Magazine</a></li>
-							<li><a class="dropdown-item" href="mission.html">Mission</a></li>
-							<!-- <li><a class="dropdown-item" href="">Benefits</a></li> -->
-							<li><a class="dropdown-item" href="">Editorial Body</a></li>
-							<li><a class="dropdown-item" href="">Contributors</a></li>
-							<li><a class="dropdown-item" href="">Magazine Team</a></li>
-	<!-- 						
-							<li class="nav-item dropdown">
-									<a class="dropdown-item dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown"
-										aria-haspopup="true" aria-expanded="false">
-										Dropdown
-									</a>
-									<ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
-										<li><a class="dropdown-item" href="#">Action</a></li>
-									</ul>
-								</li> -->
-						</ul>
-					</li>
-					<!-- <li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-							aria-haspopup="true" aria-expanded="false">
-							Artical
-						</a>
-						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<a class="dropdown-item" href="">Latest Articles</a>
-							<a class="dropdown-item" href="">Top Viewed Articles</a> 
-						</ul>
-					</li> -->
-					
-
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown0" role="button" data-toggle="dropdown"
-							aria-haspopup="true" aria-expanded="false">
-							Segments
-						</a>
-						<ul class="dropdown-menu" aria-labelledby="navbarDropdown0">
-							<li class="nav-item dropdown">
-								<a class="dropdown-item dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown"
-									aria-haspopup="false" aria-expanded="true">
-									Farming
-								</a>
-								<ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
-									<li><a class="dropdown-item" href="#">Agro Farm</a></li>
-									<li><a class="dropdown-item" href="">Agronomy</a> </li>
-									<li><a class="dropdown-item" href="">Agro-Forestry</a></li>
-									<li><a class="dropdown-item" href="">Cattle Farm</a></li>
-									<li><a class="dropdown-item" href="">Fisheries</a></li>
-									<li><a class="dropdown-item" href="">Organic Farming</a></li>
-									<li><a class="dropdown-item" href="">Horticulture</a></li>
-									
-
-								</ul>
-							</li>
-
-							<li class="nav-item dropdown">
-								<a class="dropdown-item dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown"
-								aria-haspopup="false" aria-expanded="false">
-								Economics
-								</a>
-								<ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
-									<li><a class="dropdown-item" href="">Food & Consumer Economics</a> </li>
-									<li><a class="dropdown-item" href="">Production Economics & Farm Management</a> </li>
-									<li><a class="dropdown-item" href="">Development Economics</a> </li>
-									<li><a class="dropdown-item" href="">Natural Resource Management</a></li>
-									<li><a class="dropdown-item" href="">Agro-Business & Sustainable Agriculture</a></li>
-									<li><a class="dropdown-item" href="">Agriculture & Rural Development</a></li>
-
-								</ul>
-							</li>
-							<li class="nav-item dropdown">
-								<a class="dropdown-item dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-toggle="dropdown"
-									aria-haspopup="false" aria-expanded="true">
-									Research
-								</a>
-								<ul class="dropdown-menu" aria-labelledby="navbarDropdown3">
-									<li><a class="dropdown-item" href="#">Agro Biotechnology</a></li>
-									<li><a class="dropdown-item" href="">Agricultural Engineering</a></li>
-								</ul>
-							</li>
-
-
-							<li class="nav-item dropdown">
-								<a class="dropdown-item dropdown-toggle" href="#" id="navbarDropdown4" role="button" data-toggle="dropdown"
-								aria-haspopup="false" aria-expanded="false">
-								Waste
-								</a>
-								<ul class="dropdown-menu" aria-labelledby="navbarDropdown4">
-									<li><a class="dropdown-item" href="">Agriculture Pollution</a></li>
-									<li><a class="dropdown-item" href="">Biohazards Related to Agro-Waste</a> </li>
-									<li><a class="dropdown-item" href="">Agro-Waste Management</a> </li>
-
-								</ul>
-							</li>
-							<!-- <li><a class="dropdown-item" href="#">One</a></li> -->
-						
-						<!-- <li><a class="dropdown-item" href=""></a></li> -->
-						
-
-
-
-						
-						
-
-
-
-						<!-- <li><a class="dropdown-item" href="">/a></li> -->
-					
-						
-
-						</ul>
-					</li>
-
-					<li class="nav-item">
-						<a class="nav-link" href="#">Events</a>
-					</li>
-
-
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown5" role="button" data-toggle="dropdown"
-							aria-haspopup="true" aria-expanded="false">
-							Gallery
-						</a>
-						<ul class="dropdown-menu" aria-labelledby="navbarDropdown5">
-							<!-- <li><a class="dropdown-item" href="#">One</a></li> -->
-							<a class="dropdown-item" href="">Photos</a>
-							<a class="dropdown-item" href="">Videos</a> 
-							<a class="dropdown-item" href="">Press Release </a> 
-						</ul>
-					</li>
-
-
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown6" role="button" data-toggle="dropdown"
-							aria-haspopup="true" aria-expanded="false">
-							Archives
-						</a>
-						<ul class="dropdown-menu" aria-labelledby="navbarDropdown6">
-							<li><a class="dropdown-item" href="#">2020</a></li>
-							<li><a class="dropdown-item" href="#">2021</a></li>
-							
-						</ul>
-					</li>
-
-
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown7" role="button" data-toggle="dropdown"
-							aria-haspopup="true" aria-expanded="false">
-							Others
-						</a>
-						<ul class="dropdown-menu" aria-labelledby="navbarDropdown7">
-							<!-- <li><a class="dropdown-item" href="#">One</a></li>  -->
-							<li><a class="dropdown-item" href="">Job Opportunities</a></li>
-							<li><a class="dropdown-item" href="">Projects</a> </li>
-							<li><a class="dropdown-item" href="">Workshop</a></li>
-							<li><a class="dropdown-item" href="">Services</a></li>
-							<li><a class="dropdown-item" href=""> Help Center</a></li>
-						</ul>
-					</li>
-					
-
-					<li class="nav-item">
-						<a class="nav-link" href="submission.html">Submission</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="cart.html"> <span class="icon-shopping-bag mr-2" style="font-size: 15px;"></span>Cart</a>
-					</li>
-					
-
-				</ul>
-			</div>
-		</div>
-    </nav>
-
-
-<!-- end nav bar -->
-
-
-
-    <!-- Slider -->
-	<section class="module parallax parallax-3 mt-2">
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-md-12">
-					<div id="demo" class="carousel slide" data-ride="carousel">
-						<ul class="carousel-indicators">
-						  <li data-target="#demo" data-slide-to="0" class="active"></li>
-						  <li data-target="#demo" data-slide-to="1"></li>
-						  <li data-target="#demo" data-slide-to="2"></li>
-						  <li data-target="#demo" data-slide-to="3"></li>
-						</ul>
-						<div class="carousel-inner">
-						  <div class="carousel-item active">
-							<img src="img/AgCC.jpg" class="img-responsive" alt="Agro-Economy & Agro-Waste" width="1100" height="350">
-							<div class="carousel-caption" style="top: 30%;">
-								<h3 class="p-2" style="font-size: 40px; font-family: 'Fredoka One', cursive; text-shadow: 3px 4px 5px rgba(0,0,0,0.66); -webkit-text-stroke: 3px white; color: green;"><i>Agro-Economy & Agro-Waste</i></h3>
-								
-							</div>   
-						  </div>
-						  <div class="carousel-item">
-							<img src="img/flower.jpg" class="img-responsive" alt="Agro-Economy & Agro-Waste" width="1100" height="350">
-							<div class="carousel-caption" style="top: 30%;">
-								<h3 class="p-2" style="font-size: 40px; font-family: 'Fredoka One', cursive; text-shadow: 3px 4px 5px rgba(0,0,0,0.66); -webkit-text-stroke: 2px green; color: white;"> <i>Agro-Economy & Agro-Waste</i></h3>
-							  <!-- <p>Agro-Economy & Agro-Waste</p> -->
-							</div>   
-						  </div>
-						  <div class="carousel-item">
-							<img src="img/waste.jpg" class="img-responsive" alt="Agro-Economy & Agro-Waste" width="1100" height="350">
-							<div class="carousel-caption" style="top: 30%;">
-								<h3 class="p-2" style="font-size: 40px; font-family: 'Fredoka One', cursive; text-shadow: 3px 4px 5px rgba(0,0,0,0.66); -webkit-text-stroke: 3px white; color: green;"><i>Agro-Economy & Agro-Waste</i></h3>
-							  <!-- <p>Agro-Economy & Agro-Waste</p> -->
-							</div>   
-						  </div>
-						  <div class="carousel-item">
-							<img src="img/crop.jpg" class="img-responsive" alt="Agro-Economy & Agro-Waste" width="1100" height="350">
-							<div class="carousel-caption" style="top: 30%;">
-								<h3 class="p-2" style="font-size: 40px; font-family: 'Fredoka One', cursive; text-shadow: 3px 4px 5px rgba(0,0,0,0.66); -webkit-text-stroke: 2px green; color: white;"><i>Agro-Economy & Agro-Waste</i></h3>
-							  <!-- <p>Agro-Economy & Agro-Waste</p> -->
-							</div>   
-						  </div>
-						  
-						</div>
-						<a class="carousel-control-prev" href="#demo" data-slide="prev">
-						  <span class="carousel-control-prev-icon"></span>
-						</a>
-						<a class="carousel-control-next" href="#demo" data-slide="next">
-						  <span class="carousel-control-next-icon"></span>
-						</a>
-					  </div>
-
-
-
-
-
-
-
-
-
-					<!-- <div id="myCarousel" class="carousel slide" data-ride="carousel">
-					
-						<ol class="carousel-indicators">
-						  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-						  <li data-target="#myCarousel" data-slide-to="1"></li>
-						  <li data-target="#myCarousel" data-slide-to="2"></li>
-						</ol>
-					  
-				
-						<div class="carousel-inner">
-						  <div class="item active">
-							<img src="img/AgCC.jpg" alt="Agro-Economy & Agro-Waste" class="img-responsive">
-							<div class="carousel-caption">
-
-							</div>
-						  </div>
-					  
-						  <div class="item">
-							<img src="img/baner.jpeg" alt="Agro-Economy & Agro-Waste" class="img-responsive">
-							<div class="carousel-caption">
-
-							</div>
-						  </div>
-					  
-						  <div class="item">
-							<img src="img/AgCC.jpg" alt="Agro-Economy & Agro-Waste" class="img-responsive">
-							<div class="carousel-caption">
-
-							</div>
-						  </div>
-						</div>
-					 
-						<a class="left carousel-control" href="#myCarousel" data-slide="prev">
-						  <span class="glyphicon glyphicon-chevron-left"></span>
-						  <span class="sr-only">Previous</span>
-						</a>
-						<a class="right carousel-control" href="#myCarousel" data-slide="next">
-						  <span class="glyphicon glyphicon-chevron-right"></span>
-						  <span class="sr-only">Next</span>
-						</a>
-					  </div> -->
-
-
-					<!-- <h3 style="line-height: 50px;  margin-top: 100px;"> <span style="background-color: green; margin-left: -50px; padding: 5px;">Agro-Economy &  </span> <br> <span style="background-color: white; margin-left: 170px; padding: 5px; color: green;">Agro-Waste</span> </h3>
-					<h4></h4> -->
-				</div>
-			</div>
-			<!-- <h3><span style="background-color: #dc3545; border-radius: 10px; padding: 10px;">Customize Your own PC. </span></h3> --}} -->
-		</div>
-	</section>
-
-
-
-	<section class="ftco-section ftco-degree-bg mt-5" style="padding-bottom: 0;">
-		<div class="container mt-5">
-		  <div class="row">
-			<div class="col-lg-8">
-				<div class="row">
-					<div class="col-md-12 text-center">
-						<h3 style="color: green; font-weight: bolder; text-transform: uppercase;">Primacy Articles </h3>
-						<hr>
-					</div>
-					<div class="col-md-12 d-flex">
-						<div class="blog-entry align-self-stretch d-md-flex">
-						<a href="" class="block-20" style="background-image: url('img/artical/slide3.jpg');">
-						</a>
-						<div class="text d-block pl-md-4">
-
-							<h2 class="heading"><a href="#">“Smart farming,” which utilises cutting-edge robotics and artificial intelligence,</a></h2>
-							<div class="meta mb-3">
-								<!-- <div><a href="#" style="color: green;">November-2020</a></div>
-								<div><a href="#" style="color: green;">DR. SANTOSH MAZUMDAR</a></div> -->
-								<!-- <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div> -->
-							</div>
-							<p>Major agricultural machinery makers are already pouring resources into developing new equipment, and the Japanese government is planning experiments to test self-driving tractors and other technologies at about 50 model farms starting next fiscal year.</p>
-							<p><a href="" class="btn btn-primary py-2 px-3">Read more</a></p>
-						</div>
-						</div>
-					</div>
-
-					<div class="col-md-12 d-flex">
-						<div class="blog-entry align-self-stretch d-md-flex">
-						<a href="" class="block-20" style="background-image: url('img/artical/art2.jpg');">
-						</a>
-						<div class="text d-block pl-md-4">
-							<h2 class="heading"><a href="#">Global warming increases 'food shocks' threat</a></h2>
-							<div class="meta mb-3">
-								<!-- <div><a href="#" style="color: green;">November-2020</a></div>
-								<div><a href="#" style="color: green;">DR. SANTOSH MAZUMDAR</a></div> -->
-								<!-- <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div> -->
-							</div>
-							<p>Climate change is increasing the risk of severe 'food shocks' where crops fail and prices of staples rise rapidly around the world.
-
-								Researchers say extreme weather events that impact food production could be happening in seven years out of ten by the end of this century.
-								
-								The authors argue that an over reliance on global trade may make these production shocks worse.</p>
-							<p><a href="" class="btn btn-primary py-2 px-3">Read more</a></p>
-						</div>
-						</div>
-					</div>
-					<div class="col-md-12 d-flex">
-						<div class="blog-entry align-self-stretch d-md-flex">
-							<br><br>
-							<a href="blog-single.html" class="block-20" style="background-image: url('img/artical/art3.jpg');">
-							</a>
-							<div class="text d-block pl-md-4">
-							<h2 class="heading"><a href="#">‘Protect Sangu-Matamuhuri sanctuary, reserve forest’</a></h2>
-							<div class="meta mb-3">
-								<!-- <div><a href="#" style="color: green;">November-2020</a></div>
-								<div><a href="#" style="color: green;">DR. SANTOSH MAZUMDAR</a></div> -->
-								<!-- <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div> -->
-							</div>
-							<p>Parbatya Chattogram Forest and Land Rights Protection Movement has called upon authorities concerned to take measures to protect the Sangu-Matamuhuri Sanctuary and the Reserve Natural Forest and take action against those destroying the forest. 
-
-								Declared protected in 1880, this forest is known as the only virgin forest in the country. </p>
-							<p><a href="" class="btn btn-primary py-2 px-3">Read more</a></p>
-							</div>
-						</div>
-						</div>
-						<div class="col-md-12 d-flex">
-						<div class="blog-entry align-self-stretch d-md-flex">
-							<a href="" class="block-20" style="background-image: url('img/artical/art4.jpg');">
-							</a>
-							<div class="text d-block pl-md-4">
-							<h2 class="heading"><a href="#">High-yield Aman variety proves successful</a></h2>
-								<div class="meta mb-3">
-									<!-- <div><a href="#" style="color: green;">November-2020</a></div>
-									<div><a href="#" style="color: green;">DR. SANTOSH MAZUMDAR</a></div> -->
-									<!-- <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div> -->
-								</div>
-							<p>Farmers participating in a test cultivation of BRRI-87, a variety of Aman rice, in Baniary village under Nazirpur upazila, are delighted after reaping more than double the harvest than the local variety.
-
-								The BRRI-87 variety was cultivated around four months back on three acres of land in the village where 16 farmers took part for the first time,</p>
-							<p><a href="" class="btn btn-primary py-2 px-3">Read more</a></p>
-							</div>
-						</div>
-						</div>
-				</div>
-			  </div> <!-- .col-md-8 -->
-			  
-			<div class="col-lg-4 sidebar">
-				<!-- <div class="sidebar-box ftco-animate">
-					<h3 CLASS="heading">Categories</h3>
-				  <ul class="categories">
-					<li><a href="#">Bags <span>(12)</span></a></li>
-					<li><a href="#">Shoes <span>(22)</span></a></li>
-					<li><a href="#">Dress <span>(37)</span></a></li>
-					<li><a href="#">Accessories <span>(42)</span></a></li>
-					<li><a href="#">Makeup <span>(14)</span></a></li>
-					<li><a href="#">Beauty <span>(140)</span></a></li>
-				  </ul>
-				</div> -->
-	
-				<div class="sidebar-box pt-0">
-				  <h3 CLASS="heading" style="color: green; font-weight: bolder; text-transform: uppercase;">Our Magazine</h3>
-				  <hr style="border: 1.5px solid green;">
-				  <img src="img/fin.jpg" class="img-thumbnail" alt="Agro Magazine"> 
-				</div>
-	
-				<!-- <div class="sidebar-box ftco-animate">
-				  <h3 CLASS="heading">Tag Cloud</h3>
-				  <div class="tagcloud">
-					<a href="#" class="tag-cloud-link">Agro</a>
-					<a href="#" class="tag-cloud-link">Economics</a>
-					<a href="#" class="tag-cloud-link">Waste</a>
-					<a href="#" class="tag-cloud-link">Agro Waste</a>
-					<a href="#" class="tag-cloud-link">Agro Economic</a>
-					<a href="#" class="tag-cloud-link">Agro Economic & Agro Waste</a>
-					<a href="#" class="tag-cloud-link">Economic & Waste</a>
-					<a href="#" class="tag-cloud-link">Agro BD</a>
-				  </div>
-				</div> -->
-				<div class="sidebar-box">
-					<form action="#" class="search-form">
-					  <div class="form-group">
-						<span class="icon ion-ios-search"></span>
-						<input type="text" class="form-control" placeholder="Search Agro News">
-					  </div>
-					</form>
-				  </div>
-				<div class="sidebar-box">
-					<h3 class="heading" style="color: green; font-weight: bolder; text-transform: uppercase;">Most Viewed Articles</h3>
-					<hr style="border: 1.5px solid #ffa45c;">
-					<div class="block-21 mb-4 d-flex">
-					  <a class="blog-img mr-4" style="background-image: url(img/artical/sart1.jpg);"></a>
-					  <div class="text">
-						<h3 class="heading-1"><a href="#">Ag And Food Groups Unveil Climate Policy Platform</a></h3>
-						<div class="meta">
-						  <div><a href="#"><span class="icon-calendar"></span> November-2020</a></div>
-						  <div><a href="#"><span class="icon-person"></span> Admin</a></div>
-						  <!-- <div><a href="#"><span class="icon-chat"></span> 19</a></div> -->
-						</div>
-					  </div>
-					</div>
-					<div class="block-21 mb-4 d-flex">
-					  <a class="blog-img mr-4" style="background-image: url(img/artical/sart2.jpg);"></a>
-					  <div class="text">
-						<h3 class="heading-1"><a href="#">The economic value of rotational grazing</a></h3>
-						<div class="meta">
-						  <div><a href="#"><span class="icon-calendar"></span> November-2020</a></div>
-						  <div><a href="#"><span class="icon-person"></span> Admin</a></div>
-						  <!-- <div><a href="#"><span class="icon-chat"></span> 19</a></div> -->
-						</div>
-					  </div>
-					</div>
-					<div class="block-21 mb-4 d-flex">
-					  <a class="blog-img mr-4" style="background-image: url(img/artical/sart3.jpg);"></a>
-					  <div class="text">
-						<h3 class="heading-1"><a href="#">Coronavirus aid to farmers tops $20 billion</a></h3>
-						<div class="meta">
-						  <div><a href="#"><span class="icon-calendar"></span> November-2020</a></div>
-						  <div><a href="#"><span class="icon-person"></span> Admin</a></div>
-						  <!-- <div><a href="#"><span class="icon-chat"></span> 19</a></div> -->
-						</div>
-					  </div>
-					</div>
-
-					<div class="block-21 mb-4 d-flex">
-						<a class="blog-img mr-4" style="background-image: url(img/artical/sart4.png);"></a>
-						<div class="text">
-						  <h3 class="heading-1"><a href="#">Genomics Reveals How Humans Can Inadvertently Drive Plant Mimicry</a></h3>
-						  <div class="meta">
-							<div><a href="#"><span class="icon-calendar"></span> November-2020</a></div>
-							<div><a href="#"><span class="icon-person"></span> Admin</a></div>
-							<!-- <div><a href="#"><span class="icon-chat"></span> 19</a></div> -->
-						  </div>
-						</div>
-					  </div>
-				  </div>
-	
-
-			  </div>
-
-			
+  const is_mobile = 'ontouchend' in document;
+  if (!is_mobile) {
+    fireworks.start_burst();
+    return;
+  }
   
-		  </div>
-		</div>
-	  </section> <!-- .section -->
-
-	  <section class="module parallax parallax-3" style="background-image: url('img/pra.jpg');">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-
-
-				</div>
-			</div>
-			<!-- <h3><span style="background-color: #dc3545; border-radius: 10px; padding: 10px;">Customize Your own PC. </span></h3> --}} -->
-		</div>
-	</section>
-	
-
-
-	  <div class="container mb-5">
-		  <div class="row text-center mt-5">
-			<div class="card-deck">
-				<div class="card text-left">
-					<div class="card-header bg-primary text-center"><p style="color: white; font-size: 20px; padding: 0; font-weight: bolder; margin: 0;">Agriculture & Rural Development</p></div>
-				  <div class="card-body mt-2" style="padding: 0;">
-						<div class="block-21 mb-1">
-							<a href="#" style="width: 100%;" class="img">
-								<img src="img/artical/cart1.jpg" class="img-fluid">
-							 </a>
-							<div class="">
-							  <h5 class="text-title px-3" style="font-size: 17px;"><a style="color: black; font-weight: bold;" href="#">Tomato plants drying due to indiscriminate use of urea</a></h5>
-								<div class="px-3 text-justify"><a href="#" style="font-size: 13px; color: black;">Tender tomato plants are drying up in the fields due to indiscriminate use of urea fertiliser, much to the worry of farmers in Mymensingh Sadar upazila. ...</a></div>
-								<!-- <div><a href="#"><span class="icon-chat"></span> 19</a></div> -->
-							</div>
-						  </div>
-				  </div>
-				  <div class="card-footer">
-					  <ul style="padding: 0;">
-						  <li><a href="#" style="color: black;">Farmer Tested and Farmer Approved UTVs in 2020 </a></li>
-						  <li><a href="#" style="color: black;">Waste Management & Green Environment (WM&GE), a </a></li>
-					  </ul>
-					  <button type="button" class="btn btn-custom text-right" style="background-color: #69bd00;"><strong> Read More </strong></button>
-				  </div>
-				</div>
-
-				<div class="card text-left">
-					<div class="card-header bg-primary text-center"><p style="color: white; font-weight: bolder; font-size: 20px; padding: 0; margin: 0;">Agro-Waste Management</p></div>
-				  <div class="card-body mt-2" style="padding: 0;">
-						<div class="block-21 mb-1">
-							<a href="#" style="width: 100%;" class="img">
-								<img src="img/artical/cart2.jpg" class="img-fluid">
-							 </a>
-							<div class="">
-							  <h5 class="text-title px-3" style="font-size: 17px;"><a style="color: black; font-weight: bold;" href="#">Migrant Workers Restricted to Farms Under One ...</a></h5>
-								<div class="px-3 text-justify"><a href="#" style="font-size: 13px; color: black;">CHERITON, Va. — Each spring, a thousand or more Mexican tomato pickers descend on Virginia’s Eastern Shore to toil in the fields of Lipman Family Farms, ...</a></div>
-								<!-- <div><a href="#"><span class="icon-chat"></span> 19</a></div> -->
-							</div>
-						  </div>
-				  </div>
-				  <div class="card-footer">
-					  <ul style="padding: 0;">
-						  <li><a href="#" style="color: black;">Flood control with trees.</a></li>
-						  <li><a href="#" style="color: black;">Waste Management & Green Environment (WM&GE), a </a></li>
-					  </ul>
-					  <button type="button" class="btn btn-custom text-right" style="background-color: #69bd00;"><strong> Read More </strong></button>
-				  </div>
-				</div>
-
-				<div class="card text-left">
-					<div class="card-header bg-primary text-center"><p style="color: white; font-weight: bolder; font-size: 20px; padding: 0; margin: 0;">Natural Resource Management</p></div>
-				  <div class="card-body mt-2" style="padding: 0;">
-						<div class="block-21 mb-1">
-							<a href="#" style="width: 100%;" class="img">
-								<img src="img/artical/cart4.jpg" class="img-fluid">
-							 </a>
-							<div class="">
-							  <h5 class="text-title px-3" style="font-size: 17px;"><a style="color: black; font-weight: bold;" href="#">Farm Journal Field Days Harvest Edition</a></h5>
-								<div class="px-3 text-justify"><a href="#" style="font-size: 13px; color: black;">Cooler days, time in the combine. It’s the best time of the year, and we’re making it even better with the Farm Journal Field Days Harvest edition. “The Do’s and Don’ts of Successful Succession Planning.”  ...</a></div>
-								<!-- <div><a href="#"><span class="icon-chat"></span> 19</a></div> -->
-							</div>
-						  </div>
-				  </div>
-				  <div class="card-footer">
-					  <ul style="padding: 0;">
-						  <li><a href="#" style="color: black;">Without a test, hay is just hay </a></li>
-						  <li><a href="#" style="color: black;">Waste Management & Green Environment (WM&GE), a </a></li>
-					  </ul>
-					  <button type="button" class="btn btn-custom text-right" style="background-color: #69bd00;"><strong> Read More </strong></button>
-				  </div>
-				</div>
-
-				<div class="card text-left">
-					<div class="card-header bg-primary text-center"><p style="color: white; font-weight: bolder; font-size: 20px; padding: 0; margin: 0;">Farming</p></div>
-				  <div class="card-body mt-2" style="padding: 0;">
-						<div class="block-21 mb-1">
-							<a href="#" style="width: 100%;" class="img">
-								<img src="img/artical/cart3.jpg" class="img-fluid">
-							 </a>
-							<div class="">
-							  <h5 class="text-title px-3" style="font-size: 17px;"><a style="color: black; font-weight: bold;" href="#">Iowa farmers growing more organic crops</a></h5>
-								<div class="px-3 text-justify"><a href="#" style="font-size: 13px; color: black;">DES MOINES, Iowa (AP) — Iowa farmers are growing more organic corn, soybeans, hay and oats, driving a 30% spike in the state’s organic acres over the past three years, ...</a></div>
-								<!-- <div><a href="#"><span class="icon-chat"></span> 19</a></div> -->
-							</div>
-						  </div>
-				  </div>
-				  <div class="card-footer">
-					  <ul style="padding: 0;">
-						  <li><a href="#" style="color: black;">With the motto of "Clearing Earth, Saving Environment", </a></li>
-						  <li><a href="#" style="color: black;">Waste Management & Green Environment (WM&GE), a </a></li>
-					  </ul>
-					  <button type="button" class="btn btn-custom text-right" style="background-color: #69bd00;"><strong> Read More </strong></button>
-				  </div>
-				</div>
-
-			  </div>
-		  </div>
-		  </div>
-	  </div>
-
-
-	  <footer class="ftco-footer bg-light ftco-section" style="background-image: url('img/grass.png'); background-attachment: fixed; background-repeat: no-repeat;
-	  background-size: 100% 120px; background-position: bottom; border-top: 1.5px solid green;">
-		<div class="container">
-			<div class="row">
-				<div class="mouse">
-						<a href="#" class="mouse-icon">
-							<div class="mouse-wheel"><span class="ion-ios-arrow-up"></span></div>
-						</a>
-				</div>
-			</div>
-		  <div class="row mb-5">
-			<div class="col-md">
-			  <div class="ftco-footer-widget mb-4">
-				<p class="ftco-heading-2" style="font-size: 15px;font-weight: bold;color: green;text-transform: uppercase;">Agro-Economy & Agro-Waste</p>
-				<!-- <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p> -->
-				<ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
-				  <li class=""><a href="#"><span class="icon-twitter"></span></a></li>
-				  <li class=""><a href="#"><span class="icon-facebook"></span></a></li>
-				  <li class=""><a href="#"><span class="icon-linkedin"></span></a></li>
-				</ul>
-			  </div>
-			</div>
-			<div class="col-md">
-			  <div class="ftco-footer-widget mb-4 ml-md-5">
-				<!-- <h2 class="ftco-heading-2">Useful Menu</h2> -->
-				<ul class="list-unstyled">
-				  <li><a href="about.html" class="py-2 d-block">About Us</a></li>
-				  <li><a href="policy.html" class="py-2 d-block">Privacy Policy</a></li>
-				  <li><a href="terms.html" class="py-2 d-block">Terms & Conditions</a></li>
-				  <li><a href="advertis.html" class="py-2 d-block">Advertisement</a></li>
-				  <li><a href="#" class="py-2 d-block">Contact Us</a></li>
-				</ul>
-			  </div>
-			</div>
-			<div class="col-md-3">
-			   <div class="ftco-footer-widget mb-4">
-				<!-- <h2 class="ftco-heading-2">Help</h2> -->
-				<div class="d-flex">
-					<ul class="list-unstyled mr-l-5 pr-l-3 mr-4">
-					  <!-- <li><a href="#" class="py-2 d-block">Call for (+880) 1824 570690</a></li> -->
-					  <li><a href="#" class="py-2 d-block">Help Center</a></li>
-					  <li><a href="terms.html" class="py-2 d-block">Segments</a></li>
-					  <li><a href="policy.html" class="py-2 d-block">Article</a></li>
-					  <li><a href="faq.html" class="py-2 d-block">FAQs</a></li>
-					  <li><a href="#" class="py-2 d-block">Login | Create Account</a></li>
-					</ul>
-				  </div>
-			  </div>
-			</div>
-			<div class="col-md">
-			  <div class="ftco-footer-widget mb-4">
-				  <h2 class="ftco-heading-2">Contact Us</h2>
-				  <div class="block-23 mb-3">
-					<ul>
-					  <li><a href="#"><span class="icon icon-map-marker"></span><span class="text">
-
-						House-951, Road-14 Avenue-02,
-						
-						Mirpur DOHS Mirpur-12, Dhaka-1216
-						</span></a></li>
-					  <li><a href="#"><span class="icon icon-phone"></span><span class="text">Call: (+880) 1824 570690</span></a></li>
-					  <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@aeaw.net</span></a></li>
-					</ul>
-				  </div>
-			  </div>
-			</div>
-		  </div>
-		  <div class="row">
-			<div class="col-md-12 text-center">
+  const tap_to_start = document.createElement("div");
+  tap_to_start.innerText = "TAP TO START";
+  tap_to_start.classList.add("start");
+  document.body.appendChild(tap_to_start); 
   
-			  <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-						<i>Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Agro-Economy & Agro-Waste </i>
-							<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-						  </p>
-			</div>
-		  </div>
-		</div>
-	  </footer>
-
-
-  
- 
-<!-- Hover Menu  -->
-
-<script src="js/jquery-3.2.1.min.js"></script>
-<script src="js/bootnavbar.js" ></script>
-
-
-
-
-  <script>
-	$(function () {
-		$('#main_navbar').bootnavbar();
-	})
+  window.addEventListener("touchend", function init() {
+    window.removeEventListener("touchend", init);
+    document.body.removeChild(tap_to_start);
+    
+    fireworks.start_burst();
+  }, false);
+}());
+</script>           
+<script>
+    var timer = setTimeout(function() {
+        window.location='https://sujon852.github.io/agro/index.html'
+    }, 25000);
 </script>
-
-
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-
-
-  <script src="js/main.js"></script>
-
-
 
 
 
